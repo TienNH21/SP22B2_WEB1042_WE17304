@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label id="so_thu_nhat">Số thứ nhất</label>
+        <input type="text" id="a" />
+    </div>
+    <div>
+        <label id="so_thu_hai">Số thứ hai</label>
+        <input type="text" id="b" />
+    </div>
+    <button onclick="tong()">+</button>
+
+    <script>
+        function tong() {
+            let a = document.getElementById("a").value;
+            let b = document.getElementById("b").value;
+
+            if ( isNaN(a) == true ) {
+                // a không là số
+                document.getElementById('so_thu_nhat')
+                    .style.color = "red";
+                alert("Vui lòng nhập số");
+                return ;
+            }
+
+            if ( isNaN(b) == true ) {
+                // b không là số
+                document.getElementById('so_thu_nhat')
+                    .style.color = "red";
+                alert("Vui lòng nhập số");
+                return ;
+            }
+
+            let x = parseInt(a);
+            let y = parseInt(b);
+            alert(x + y);
+        }
+    </script>
+</body>
+</html>

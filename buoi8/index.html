@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label>Họ tên</label>
+        <input type="text" id="ho_ten" />
+    </div>
+    <div>
+        <label>Mã SV</label>
+        <input type="text" id="ma_sv" />
+    </div>
+    <div>
+        <label>Chuyên ngành</label>
+        <input type="text" id="chuyen_nganh" />
+    </div>
+    <button onclick="doc()">Đọc</button>
+</body>
+
+<script>
+    function doc() {
+        let hoTen = document
+            .getElementById("ho_ten").value;
+        let maSV = document
+            .getElementById("ma_sv").value;
+        let chuyenNganh = document
+            .getElementById("chuyen_nganh").value;
+
+        if (hoTen.length == 0) {
+            alert("Không được để trống họ tên");
+            return ;
+        }
+
+        if (maSV.length == 0) {
+            alert("Không được để trống mã sinh viên");
+            return ;
+        } else if (maSV.length != 7) {
+            alert("Mã sinh viên phải là 7 kí tự");
+            return ;
+        }
+    }
+</script>
+</html>
