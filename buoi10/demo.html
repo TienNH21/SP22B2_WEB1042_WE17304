@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="demo">
+        <!-- <li>Nhập môn lập trình</li> -->
+    </ul>
+
+    <script>
+        let listMH = [
+            "Nhập môn lập trình",
+            "Lập trình Java 1",
+            "Lập trình C# 1",
+            "Xây dựng trang web",
+            "Cơ sở dữ liệu",
+        ];
+
+        // let x = document.createElement("li");
+        // x.innerText = "Nhập môn lập trình";
+        // console.log(x);
+
+        for (let i = 0; i < listMH.length; i++) {
+            let mon = listMH[i];
+            // createElement -> DOM
+            let element = document.createElement("li");
+
+            // innerText
+            element.innerText = mon;
+            console.log(element);
+            document.getElementById("demo")
+                .append(element);
+        }
+    </script>
+</body>
+</html>

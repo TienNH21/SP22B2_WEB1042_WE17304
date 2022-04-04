@@ -1,4 +1,23 @@
-let dssv = [];
+let listSv = [
+    {
+        ho_ten: "Nguyen Van A",
+        ma_sv: "PH1",
+        chuyen_nganh: "TKTW",
+        hoc_ky: 1
+    },
+    {
+        ho_ten: "Nguyen Thi B",
+        ma_sv: "PH2",
+        chuyen_nganh: "UDPM",
+        hoc_ky: 5
+    },
+    {
+        ho_ten: "Tran Van C",
+        ma_sv: "PH3",
+        chuyen_nganh: "LTMT",
+        hoc_ky: 4
+    },
+];
 
 function them() {
     let hoTen = document.getElementById("ho_ten").value;
@@ -13,5 +32,5 @@ function them() {
         hoc_ky: hocKy,
     };
 
-    dssv.push(sv);
+    listSv.push(sv);
 }

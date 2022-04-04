@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, td, th {
+            border: solid 2px black;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <!-- form -->
+        <div>
+            <form>
+                <div>
+                    <label>Họ tên</label>
+                    <input type="text" id="ho_ten" />
+                </div>
+                <div>
+                    <label>Mã SV</label>
+                    <input type="text" id="ma_sv" />
+                </div>
+                <div>
+                    <label>Chuyên ngành</label>
+                    <input type="text" id="chuyen_nganh" />
+                </div>
+                <div>
+                    <label>Học kỳ</label>
+                    <input type="text" id="hoc_ky" />
+                </div>
+                <button onclick="them()">Thêm</button>
+            </form>
+        </div>
+        <!-- end form -->
+
+        <!-- table -->
+        <div>
+            <table>
+                <thead>
+                    <th>Họ tên</th>
+                    <th>Mã SV</th>
+                    <th>Chuyên ngành</th>
+                    <th>Học kỳ</th>
+                </thead>
+                <tbody>
+                    <tr id="tr_1"></tr>
+                    <tr id="tr_2"></tr>
+                    <tr id="tr_3"></tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- end table -->
+    </div>
+
+    <script>
+        let sv1 = {
+            ho_ten: "Nguyen Van A",
+            ma_sv: "PH1",
+            chuyen_nganh: "TKTW",
+            hoc_ky: 1
+        };
+
+        let sv2 = {
+            ho_ten: "Nguyen Thi B",
+            ma_sv: "PH2",
+            chuyen_nganh: "UDPM",
+            hoc_ky: 5
+        };
+        let sv3 = {
+            ho_ten: "Tran Van C",
+            ma_sv: "PH3",
+            chuyen_nganh: "LTMT",
+            hoc_ky: 4
+        }
+
+        let hoTenEle = document.createElement("td");
+        hoTenEle.innerText = sv1.ho_ten;
+
+        let maSvEle = document.createElement("td");
+        maSvEle.innerText = sv1.ma_sv;
+
+        let nganhEle = document.createElement("td");
+        nganhEle.innerText = sv1.chuyen_nganh;
+
+        let hocKyEle = document.createElement("td");
+        hocKyEle.innerText = sv1.hoc_ky;
+
+        document.getElementById("tr_1").append(hoTenEle);
+        document.getElementById("tr_1").append(maSvEle);
+        document.getElementById("tr_1").append(nganhEle);
+        document.getElementById("tr_1").append(hocKyEle);
+    </script>
+    <!-- <script src="./index.js"></script> -->
+</body>
+</html>
