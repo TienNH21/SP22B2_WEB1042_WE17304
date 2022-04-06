@@ -1,4 +1,4 @@
-let listSv = [
+let listSV = [
     {
         ho_ten: "Nguyen Van A",
         ma_sv: "PH1",
@@ -32,5 +32,31 @@ function them() {
         hoc_ky: hocKy,
     };
 
-    listSv.push(sv);
+    listSV.push(sv);
+
+    document.getElementById("table_body")
+        .innerHTML = "";
+
+    loadTable();
 }
+
+function loadTable() {
+    let html = "";
+    for (let i = 0; i < listSV.length; i++) {
+        let sv = listSV[i];
+        let tableRow = `
+            <tr>
+                <td>${ sv.ho_ten }</td>
+                <td>${ sv.ma_sv }</td>
+                <td>${ sv.chuyen_nganh }</td>
+                <td>${ sv.hoc_ky }</td>
+            </tr>
+        `;
+        html = html + tableRow;
+    }
+    console.log(html);
+    document.getElementById("table_body")
+        .innerHTML = html;
+}
+
+loadTable();
